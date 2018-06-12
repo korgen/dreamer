@@ -1,0 +1,30 @@
+int a[]={0,1,2,3,4,5};
+int b = 30;
+void setup() {
+for(int led = 0; led < 6; led++){
+  pinMode(a[led],OUTPUT);
+  
+  
+  }
+
+}
+
+void loop() {
+  for(int led = 0; led < 5; led++){
+    digitalWrite(a[led],HIGH);
+    delay(b);
+    digitalWrite(a[led+1],HIGH);
+    delay(b);
+    digitalWrite(a[led],LOW);
+    delay(b);
+    }
+
+for(int led = 5; led >0; led--){
+    digitalWrite(a[led],HIGH);
+    delay(b);
+    digitalWrite(a[led-1],HIGH);
+    delay(b);
+    digitalWrite(a[led],LOW);
+     delay(b);
+    }
+}
